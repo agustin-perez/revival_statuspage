@@ -1,0 +1,154 @@
+.StatusCard{
+    width: 100%;
+    height: 60px;
+    border-radius: 15px;
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    margin-bottom: 30px;
+    z-index: 0;
+    box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.253);
+}
+
+.StatusNormal{
+    height: inherit;
+    width: inherit;
+    min-width: inherit;
+    border-radius: inherit;
+    background: rgb(191, 255, 185);
+    box-shadow: inherit;
+}
+
+.StatusWarning{
+    height: inherit;
+    width: inherit;
+    min-width: inherit;
+    border-radius: inherit;
+    background: rgb(252, 255, 192);
+    box-shadow: inherit;
+}
+
+.StatusCritical{
+    height: inherit;
+    width: inherit;
+    min-width: inherit;
+    border-radius: inherit;
+    background: rgb(255, 168, 168);
+    box-shadow: inherit;
+}
+
+.criticalIcon{
+    position: absolute;
+    margin: auto;
+    text-align: left;
+    align-items: left;
+    width: 25px;
+    left: 150px;
+    top: 18px;  
+    color: #ff0000;
+    /*-webkit-filter: invert(0);
+    filter: invert(0);*/
+}
+
+.StatusDefault{
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+    background: rgb(213,211,211);
+    box-shadow: inherit;
+}
+
+.StatusCTitle{
+    position: absolute;
+    margin: auto;
+    text-align: left;
+    color: dimgray;
+    font-size: 25px;
+    left: 20px;
+    top: 14px;
+}
+
+.StatusCText{
+    position: absolute;
+    margin: auto;
+    text-align: right;
+    color: #730bfa;
+    font-size: 25px;
+    right: 20px;
+    top: 14px;
+}
+
+.StatusCritical .StatusCText{
+    color: #ff0000;
+}
+
+.StatusCritical .StatusCTitle{
+    color: black;
+}
+
+.StatusDefault .StatusCText{
+    color: #367c16;
+}
+
+.StatusDefault .StatusCTitle{
+    color: black;
+}
+
+.StatusWarning .StatusCTitle{
+    color: black;
+}
+
+.StatusWarning .StatusCText{
+    color: #8d8b0e;
+}
+
+@media screen and (max-width: 1000px){
+    .StatusCard{
+        width: 80vw;
+        min-width: auto;
+        height: 90px;
+        border-radius: 15px;
+    }
+
+    .StatusCTitle{
+        position: absolute;
+        margin: auto;
+        text-align: center;
+        top: 33px;
+        font-size: 18px;
+        width: 100px;
+        left: 8px;
+    }
+
+    .StatusNormal .StatusCTitle {
+        position: absolute;
+        margin: auto;
+        text-align: center;
+        top: 9px;
+        font-size: 18px;
+        width: 100px;
+        left: 15px;
+    }
+    
+    .StatusCText{
+        top: 38px;
+        font-size: 12px;
+    }
+
+    .criticalIcon{
+        width: 20px;
+        left: 110px;
+        top: 37px;  
+    }
+    
+    .StatusCritical .StatusCText{
+        position: absolute;
+        margin: auto;
+        text-align: center;
+        font-size: 12px;
+        width: 100px;
+        right: 10px;
+        top: 43%;
+    }
+}
+  
