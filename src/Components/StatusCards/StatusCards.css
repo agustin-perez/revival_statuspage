@@ -62,7 +62,7 @@
     position: absolute;
     margin: auto;
     text-align: left;
-    color: dimgray;
+    color: black;
     font-size: 25px;
     left: 20px;
     top: 14px;
@@ -72,34 +72,14 @@
     position: absolute;
     margin: auto;
     text-align: right;
-    color: #730bfa;
+    color: black;
     font-size: 25px;
     right: 20px;
     top: 14px;
 }
 
-.StatusCritical .StatusCText{
-    color: #ff0000;
-}
-
-.StatusCritical .StatusCTitle{
-    color: black;
-}
-
 .StatusDefault .StatusCText{
     color: #367c16;
-}
-
-.StatusDefault .StatusCTitle{
-    color: black;
-}
-
-.StatusWarning .StatusCTitle{
-    color: black;
-}
-
-.StatusWarning .StatusCText{
-    color: #8d8b0e;
 }
 
 @media screen and (max-width: 1000px){

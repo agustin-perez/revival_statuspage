@@ -5,7 +5,9 @@ import StatusCard from './Components/StatusCards/StatusCards';
 
 class App extends Component {
   state = {
-    outrunSatus: false,
+    outrunStaus: false,
+    yackerStatus: false,
+    milesStatus: false,
     isLoading: true
   }
 
@@ -16,7 +18,7 @@ class App extends Component {
     let response = await fetch(endpointURL);
     console.log(response.status);
     if (response.status === 204){
-      this.setState({outrunSatus: true, isLoading: false});
+      this.setState({outrunStatus: true, isLoading: false});
     }
     this.setState({isLoading: false});
   }
@@ -35,10 +37,10 @@ class App extends Component {
         <h1>Revival Status Page</h1>
         <div className="cards">
           <h2>Server</h2>
-          <StatusCard title={(this.state.outrunSatus ? ("Outrun") : ("Outrun ⚠"))} text={(this.state.outrunSatus ? ("Working") : ("Server down"))} severity={(this.state.outrunSatus ? ("default") : ("critical"))}/>
+          <StatusCard title={(this.state.outrunStaus ? ("Outrun") : ("Outrun ⚠"))} text={(this.state.outrunStatus ? ("Working") : ("Server down"))} severity={(this.state.outrunStatus ? ("default") : ("critical"))}/>
           <h2>Services</h2>
-          <StatusCard title={"Yacker Bot"} text={"Network issues"} severity={"critical"}/>
-          <StatusCard title={"The Miles Electric Bot"} text={"Server overloaded"} severity={"warning"}/>
+          <StatusCard title={(this.state.yackerStatus ? ("Yacker") : ("Yacker ⚠"))} text={(this.state.yackerStatus ? ("Working") : ("Unknown"))} severity={(this.state.yackerStatus ? ("default") : ("warning"))}/>
+          <StatusCard title={(this.state.milesStatus ? ("The Miles Electric") : ("The Miles Electric ⚠"))} text={(this.state.milesStatus? ("Working") : ("Unknown"))} severity={(this.state.milesStatus ? ("default") : ("warning"))}/>
         </div>
         <p>Welcome to the Revival Status Page.<br/>All the content shown on this page depends on the actual server to be available. 
         If this page is not loading, please let us know at our Discord server.</p>
