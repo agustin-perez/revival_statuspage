@@ -26,7 +26,7 @@ const StatusCards = ( props ) => {
             return (
                 <div className="StatusCard">
                     <div className="StatusCritical">
-                        <img className="criticalIcon" src={WarningIcon} alt="CriticalIcon"/>
+                        
                         <p className="StatusCTitle">{props.title}</p>
                         <p className="StatusCText">{props.text}</p>
                     </div>
