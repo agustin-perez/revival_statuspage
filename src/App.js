@@ -37,7 +37,7 @@ class App extends Component {
         <h1>Revival Status Page</h1>
         <div className="cards">
           <h2>Server</h2>
-          <StatusCard title={(this.state.outrunStaus ? ("Outrun") : ("Outrun ⚠"))} text={(this.state.outrunStatus ? ("Working") : ("Server down"))} severity={(this.state.outrunStatus ? ("default") : ("critical"))}/>
+          <StatusCard title={(this.state.outrunStatus ? ("Outrun") : ("Outrun ⚠"))} text={(this.state.outrunStatus ? ("Working") : ("Server down"))} severity={(this.state.outrunStatus ? ("default") : ("critical"))}/>
           <h2>Services</h2>
           <StatusCard title={(this.state.yackerStatus ? ("Yacker") : ("Yacker ⚠"))} text={(this.state.yackerStatus ? ("Working") : ("Unknown"))} severity={(this.state.yackerStatus ? ("default") : ("warning"))}/>
           <StatusCard title={(this.state.milesStatus ? ("The Miles Electric") : ("The Miles Electric ⚠"))} text={(this.state.milesStatus? ("Working") : ("Unknown"))} severity={(this.state.milesStatus ? ("default") : ("warning"))}/>
