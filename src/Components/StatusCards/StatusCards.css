@@ -84,51 +84,29 @@
 
 @media screen and (max-width: 1000px){
     .StatusCard{
-        width: 80vw;
-        min-width: auto;
-        height: 90px;
+        width: 100%;
+        height: 60px;
         border-radius: 15px;
+        min-width: auto;
     }
+}
 
-    .StatusCTitle{
-        position: absolute;
-        margin: auto;
-        text-align: center;
-        top: 33px;
-        font-size: 18px;
-        width: 100px;
-        left: 8px;
-    }
-
-    .StatusNormal .StatusCTitle {
-        position: absolute;
-        margin: auto;
-        text-align: center;
-        top: 9px;
-        font-size: 18px;
-        width: 100px;
-        left: 15px;
+@media screen and (max-width: 400px){
+    .StatusCard{
+        width: 100%;
+        height: 60px;
+        border-radius: 15px;
+        min-width: 150px;
     }
     
     .StatusCText{
-        top: 38px;
-        font-size: 12px;
+        font-size: 15px;
+        top: 22px;
     }
 
-    .criticalIcon{
-        width: 20px;
-        left: 110px;
-        top: 37px;  
-    }
-    
-    .StatusCritical .StatusCText{
-        position: absolute;
-        margin: auto;
-        text-align: center;
-        font-size: 12px;
-        width: 100px;
-        right: 10px;
-        top: 43%;
+    .StatusCTitle{
+        font-size: 15px;
+        top: 22px;
     }
 }
   

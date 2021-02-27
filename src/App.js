@@ -12,8 +12,8 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const outrunEndpointURL = "https://sonic.runner.es/statusAPI/generate204";
-    const yackerEndpointURL = "https://sonic.runner.es/botLogAPI/logs/";
+    const outrunEndpointURL = "https://www.sonicrunners.com/statusAPI/generate204";
+    const yackerEndpointURL = "https://www.sonicrunners.com/botLogAPI/logs/";
     let outrunPromise = await fetch(outrunEndpointURL);
     let yackerPromise = await fetch(yackerEndpointURL);
     if (outrunPromise.status === 204){
@@ -36,14 +36,18 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Revival Status Page</h1>
-        <div className="cards">
-          <h2>Server</h2>
-          <StatusCard title={(this.state.outrunStatus ? ("Outrun") : ("Outrun ⚠"))} text={(this.state.outrunStatus ? ("Working") : ("Server down"))} severity={(this.state.outrunStatus ? ("default") : ("critical"))}/>
-          <h2>Services</h2>
-          <StatusCard title={(this.state.yackerStatus ? ("Yacker") : ("Yacker ⚠"))} text={(this.state.yackerStatus ? ("Working") : ("Bot not available"))} severity={(this.state.yackerStatus ? ("default") : ("critical"))}/>
+        <div className="first-half">
+          <div className="cards">
+            <h2>Server</h2>
+            <StatusCard title={(this.state.outrunStatus ? ("Outrun") : ("Outrun ⚠"))} text={(this.state.outrunStatus ? ("Working") : ("Server down"))} severity={(this.state.outrunStatus ? ("default") : ("critical"))}/>
+            <h2>Services</h2>
+            <StatusCard title={(this.state.yackerStatus ? ("Yacker") : ("Yacker ⚠"))} text={(this.state.yackerStatus ? ("Working") : ("Bot not available"))} severity={(this.state.yackerStatus ? ("default") : ("critical"))}/>
+          </div>
+          <div className="bottomText">
+            <p>Welcome to the Revival Status Page.<br/>All the content shown on this page depends on the actual server to be available. 
+            If this page is not loading, please let us know at our Discord server.</p>
+          </div>
         </div>
-        <p>Welcome to the Revival Status Page.<br/>All the content shown on this page depends on the actual server to be available. 
-        If this page is not loading, please let us know at our Discord server.</p>
         <Discord source={"https://canary.discord.com/widget?id=587965482452385792&theme=dark"}/>
       </div>
     );
